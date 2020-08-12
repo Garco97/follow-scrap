@@ -8,7 +8,7 @@ from types import SimpleNamespace
 import threading
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("-incognito")   
-#chrome_options.add_argument("-headless") 
+chrome_options.add_argument("-headless") 
 with open('credentials.json') as f:
   config = json.load(f)
   config = SimpleNamespace(**config)
