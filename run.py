@@ -41,12 +41,13 @@ def go():
     log.click()
     print("Followers")
     time.sleep(2)
-
+    aux = 4
     while(True):
       log = driver.find_elements_by_class_name("sqdOP")
       print(len(log))
-      for i in range(4,len(log)):
+      for i in range(aux,len(log)):
         log[i].click()
+        aux+=1;
       time.sleep(2)
   except:
     driver.close()
